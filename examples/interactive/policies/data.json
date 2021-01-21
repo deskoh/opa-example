@@ -1,0 +1,8 @@
+{
+  "users": [
+    { "name": "alice", "admin": true },
+    { "name": "bob", "admin": false },
+    { "name": "charlie", "admin": false },
+    { "name": "david", "admin": true }
+  ]
+}
