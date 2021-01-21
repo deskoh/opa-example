@@ -1,0 +1,7 @@
+{
+  "role_membership": {
+    "engineering": ["alice", "charlie"],
+    "webdev": ["alice"],
+    "hr": ["bob"]
+  }
+}

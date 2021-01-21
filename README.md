@@ -14,16 +14,25 @@ docker run --rm -p 8181:8181 \
   -v $PWD/policies:/policies \
   openpolicyagent/opa run --server /policies
 
+# Run OPA locally
+opa run --server policies
+
 # Run OPA REPL with data and policies
 docker run --rm -it -v $PWD/policies:/policies openpolicyagent/opa run /policies
 
 # Run query
 docker run --rm -v $PWD/policies:/policies openpolicyagent/opa eval -d /policies 'data.acl'
+
+# Test policies (load all files in policies and tests directory)
+opa test -v policies tests
 ```
 
 ## REST APIs
 
 ```sh
+# List policies
+curl http://localhost:8181/v1/policies
+
 # Upload data (referenced using `import data.myapi.acl`)
 curl -X PUT -H "Content-Type: application/json" \
   --data @policies/acl/myapi-acl.json \

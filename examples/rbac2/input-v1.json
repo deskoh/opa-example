@@ -1,0 +1,8 @@
+{
+  "input": {
+    "user": "alice",
+    "roles": ["engineering", "webdev"],
+    "resource": "server123",
+    "action": "read"
+  }
+}

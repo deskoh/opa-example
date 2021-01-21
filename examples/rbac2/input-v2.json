@@ -1,0 +1,7 @@
+{
+  "input": {
+    "user": "alice",
+    "resource": "server123",
+    "action": "read"
+  }
+}
